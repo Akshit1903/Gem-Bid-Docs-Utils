@@ -29,7 +29,7 @@ chrome.storage.local.get(
   (r) => {
     csrfInput.value = r.csrfToken || "";
     containsInput.value = r.contains || "defence";
-    keywordsInput.value = r.keywords || "abc, def";
+    keywordsInput.value = r.keywords;
     startDateInput.value = r.startDate || format(prior);
     endDateInput.value = r.endDate || format(today);
     startPage.value = r.startPage || 1;
