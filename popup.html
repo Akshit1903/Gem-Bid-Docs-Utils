@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSRF API Caller</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 10px;
+        width: 260px;
+      }
+      input,
+      textarea {
+        width: 100%;
+        margin: 5px 0;
+        padding: 5px;
+        box-sizing: border-box;
+      }
+      label {
+        font-weight: bold;
+        font-size: 0.9em;
+      }
+      button {
+        margin-top: 10px;
+        width: 100%;
+        padding: 6px;
+      }
+      #status {
+        margin-top: 8px;
+        font-size: 0.9em;
+      }
+    </style>
+  </head>
+  <body>
+    <label>CSRF Token</label>
+    <input type="text" id="csrfToken" placeholder="Enter CSRF token" />
+
+    <label>Contains</label>
+    <input type="text" id="contains" placeholder="defence" />
+
+    <label>Keywords (comma separated)</label>
+    <input type="text" id="keywords" placeholder="abc, def" />
+
+    <label>Start Date</label>
+    <input type="date" id="startDate" />
+
+    <label>End Date</label>
+    <input type="date" id="endDate" />
+
+    <div style="display: flex">
+      <div>
+        <label>Start Page</label>
+        <input type="text" id="startPage" placeholder="1" />
+      </div>
+      <div>
+        <label>End Page</label>
+        <input type="text" id="endPage" placeholder="5" />
+      </div>
+    </div>
+
+    <button id="callApi">Call API</button>
+
+    <p id="status"></p>
+    <p id="output" style="display: none"></p>
+    <button id="copyBtn" style="display: none">Click to copy</button>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "CSRF Token API Caller (CORS Safe)",
+  "version": "1.3",
+  "description": "Stores CSRF token, date range, contains, and keywords; calls API with background fetch (no CORS issue).",
+  "permissions": [
+    "storage",
+    "background",
+    "alarms",
+    "scripting",
+    "notifications"
+  ],
+  "host_permissions": [
+    "https://bidplus.gem.gov.in/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
